@@ -1,0 +1,30 @@
+﻿<Window x:Class="GavrilovDmitry_Practice3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="GavrilovDmitry_Practice3"
+        Height="450" Width="800"
+        WindowStartupLocation="CenterScreen"
+        Icon="/Resources/car.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Шапка -->
+        <Grid Grid.Row="0" Background="#FF76E383">
+            <Image Width="45" Height="45"
+                   HorizontalAlignment="Left" Margin="5"
+                   Source="/Resources/Stul.png"/>
+            <Button x:Name="btnBack"
+                    HorizontalAlignment="Right"
+                    Content="Назад"
+                    Click="btnBack_Click"/>
+        </Grid>
+
+        <!-- Основная область -->
+        <Frame x:Name="FrmMain" Grid.Row="1"
+               NavigationUIVisibility="Hidden"
+               ContentRendered="FrmMain_ContentRendered"/>
+    </Grid>
+</Window>
